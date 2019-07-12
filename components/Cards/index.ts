@@ -35,16 +35,17 @@ function createCard(data: Record<string, string>): HTMLElement {
 
 axios
   .get('https://lambda-times-backend.herokuapp.com/articles')
-  .then((response: any): void => {
+  .then((response: Record<string, any>): void => {
     const cardsContainer: HTMLElement | null = document.querySelector(
       '.cards-container'
     );
-    console.log(response.data.articles);
+    console.log(response);
     if (cardsContainer) {
-      const articles: any = response.data.articles;
+      const articles: Record<string, Record<string, string>[]> =
+        response.data.articles;
 
       for (const topic in response.data.articles) {
-        articles[topic].forEach((article: any): void => {
+        articles[topic].forEach((article: Record<string, string>): void => {
           addChild(cardsContainer, createCard(article));
         });
       }
