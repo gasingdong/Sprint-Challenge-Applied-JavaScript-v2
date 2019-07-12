@@ -1,0 +1,14 @@
+@mixin width-100 {
+  width: 100%;
+}
+
+@mixin border-bottom-grey {
+  border-bottom: 1px solid $lambda-times-color-lightgrey;
+}
+
+@mixin flex($jc: none, $ai: none, $dir: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $dir;
+}

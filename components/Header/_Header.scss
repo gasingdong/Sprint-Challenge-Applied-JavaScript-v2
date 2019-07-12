@@ -1,8 +1,8 @@
 .header {
-  .flex(space-between, center);
-  background-color: @lambda-times-color-white;
-  .border-bottom-grey();
-  .width-100();
+  @include flex(space-between, center);
+  background-color: $lambda-times-color-white;
+  @include border-bottom-grey();
+  @include width-100();
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
@@ -15,7 +15,7 @@
     font-weight: bold;
     flex: 8;
     text-align: center;
-    color: @lambda-times-color-black;
+    color: $lambda-times-color-black;
   }
   span {
     align-self: flex-end;

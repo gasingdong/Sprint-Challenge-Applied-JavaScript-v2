@@ -1,15 +1,15 @@
 .cards-container {
-  .flex(space-evenly);
-  .width-100();
+  @include flex(space-evenly);
+  @include width-100();
   margin-top: 16px;
   flex-wrap: wrap;
   @media(min-width: 1200px){
     width: 1200px;
   }
   .card {
-    .border-bottom-grey();
-    .flex(space-between, none, column);
-    background-color: @lambda-times-color-white;
+    @include border-bottom-grey();
+    @include flex(space-between, none, column);
+    background-color: $lambda-times-color-white;
     width: 380px;
     margin-bottom: 16px;
     padding: 24px;
@@ -18,11 +18,11 @@
       font-family: Didot, serif;
     }
     .author {
-      .flex(none, center);
+      @include flex(none, center);
       margin-top: 15px;
       .img-container {
         padding-right: 10px;
-        border-right: 1px solid @lambda-times-color-lightgrey;
+        border-right: 1px solid $lambda-times-color-lightgrey;
         height: 40px;
         img {
           width: 40px;
