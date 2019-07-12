@@ -39,7 +39,7 @@ axios
     const cardsContainer: HTMLElement | null = document.querySelector(
       '.cards-container'
     );
-    console.log(response);
+
     if (cardsContainer) {
       const articles: Record<string, Record<string, string>[]> =
         response.data.articles;

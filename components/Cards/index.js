@@ -14,7 +14,6 @@ axios
   .get('https://lambda-times-backend.herokuapp.com/articles')
   .then(response => {
     const cardsContainer = document.querySelector('.cards-container');
-    console.log(response);
     if (cardsContainer) {
       const articles = response.data.articles;
       for (const topic in response.data.articles) {
